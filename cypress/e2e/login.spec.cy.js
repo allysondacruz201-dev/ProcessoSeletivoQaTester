@@ -1,12 +1,15 @@
 describe('Login with Standard User', () => {
   it('Login And open the main page', () => {  
   
-  cy.visit('https://www.saucedemo.com/')
-   
+    cy.visit('https://www.saucedemo.com/')
+ 
     cy.get('[data-test="username"]').type('standard_user')
     cy.get('[data-test="password"]').type('secret_sauce')
     cy.get('[data-test="login-button"]').click()
     cy.get('[data-test="inventory-container"]').should('be.visible')
+    cy.get('#react-burger-menu-btn').click()
+    cy.get('[data-test="logout-sidebar-link"]').click()
+    cy.get('.login_wrapper-inner').should('be.visible')
     
     
   })
@@ -21,6 +24,7 @@ describe('Login with Locked User', () => {
     cy.get('[data-test="password"]').type('secret_sauce')
     cy.get('[data-test="login-button"]').click()
     cy.get('[data-test="error"]').should('be.visible')
+ 
     
   })
 })
@@ -36,6 +40,7 @@ describe('Login with Problem User', () => {
     cy.get("#react-burger-menu-btn[type='button']").click()
     cy.get("[data-test='logout-sidebar-link']").click()
     cy.get('.login_wrapper-inner').should('be.visible')
+    
 
   })
 })
@@ -55,6 +60,9 @@ describe('Login With Performance Glitch User', () => {
     cy.get('.inventory_details_desc_container').should('be.visible')
     cy.get('[data-test="back-to-products"]').click()
     cy.get('[data-test="inventory-container"]').should('be.visible')
+    cy.get('#react-burger-menu-btn').click()
+    cy.get('[data-test="logout-sidebar-link"]').click()
+    cy.get('.login_wrapper-inner').should('be.visible')
 
 
   })
@@ -69,8 +77,10 @@ describe('Login With Error User', () => {
     cy.get('[data-test="password"]').type('secret_sauce')
     cy.get('[data-test="login-button"]').click()
     cy.get('[data-test="inventory-container"]').should('be.visible')
-   
-  })
+    cy.get('#react-burger-menu-btn').click()
+    cy.get('[data-test="logout-sidebar-link"]').click()
+    cy.get('.login_wrapper-inner').should('be.visible')
+ })
 })
 
 describe('Login With Visual User', () => {
@@ -82,6 +92,9 @@ describe('Login With Visual User', () => {
     cy.get('[data-test="password"]').type('secret_sauce')
     cy.get('[data-test="login-button"]').click()
     cy.get('[data-test="inventory-container"]').should('be.visible')
+    cy.get('#react-burger-menu-btn').click()
+    cy.get('[data-test="logout-sidebar-link"]').click()
+    cy.get('.login_wrapper-inner').should('be.visible')
    
   })
 })
