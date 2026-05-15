@@ -23,9 +23,9 @@ describe('Responsive Tests', () => {
 
       
 
-      loginPage.acessLoginPage()
+      loginPage.accessLoginPage()
 
-      loginPage.acessLoginPage()
+      loginPage.accessLoginPage()
       loginPage.loginWithAnyUser(users.standardUser.username, users.standardUser.password)
       loginPage.checkProductsPage()
     })

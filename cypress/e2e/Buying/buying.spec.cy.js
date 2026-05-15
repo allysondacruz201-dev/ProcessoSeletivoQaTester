@@ -13,7 +13,7 @@ const checkoutPage = new CheckoutPage()
 describe('Login with Standard User and buy products', () => {
     it('You must login and purchase products', () => {  
 
-    loginPage.acessLoginPage()
+    loginPage.accessLoginPage()
     loginPage.loginWithAnyUser(users.standardUser.username, users.standardUser.password)
     loginPage.checkProductsPage()
 
@@ -53,22 +53,26 @@ describe('Login with Standard User and buy products', () => {
 describe('Login with Problem User and buy products', () => {
     it('There should be an error at checkout', () => {  
 
-    loginPage.acessLoginPage()
+    loginPage.accessLoginPage()
 
     loginPage.loginWithAnyUser(users.problemUser.username, users.problemUser.password)
     loginPage.checkProductsPage()
     loginPage.checkProductsPage()
+
     products.selectBackPack()
     products.selectBikeLight()
     products.selectFleeceJacket()
     products.selectOnesie()
     products.selectBoltTShirt()
+
     cartPage.enterCart()
     cartPage.checkOut()
+
     checkoutPage.fillFirstName(checkout.checkout.firstName)
     checkoutPage.fillLastName(checkout.checkout.lastName)
     checkoutPage.fillPostalCode(checkout.checkout.postalCode)
     checkoutPage.ClickContinue()
+
     cartPage.buyError()
     cartPage.cancelButton()
     cartPage.removingBackPack()
@@ -76,6 +80,7 @@ describe('Login with Problem User and buy products', () => {
     cartPage.removingOnesie()
     cartPage.returnShopping()
     loginPage.menuButton()
+    
     loginPage.clickForLogout()
     loginPage.checkLoginPage()
     

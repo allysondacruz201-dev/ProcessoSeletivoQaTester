@@ -15,7 +15,7 @@ const checkoutPage = new CheckoutPage()
 describe('Removing Products From Cart', () => {
   it('should Remove Products From The Shopping Cart', () => {
 
-    loginPage.acessLoginPage()
+    loginPage.accessLoginPage()
 
     loginPage.loginWithAnyUser(users.standardUser.username, users.standardUser.password)
     loginPage.checkProductsPage()

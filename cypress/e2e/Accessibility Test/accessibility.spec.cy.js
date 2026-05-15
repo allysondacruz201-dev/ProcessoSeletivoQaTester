@@ -1,8 +1,12 @@
+import LoginPage from "../Pages/loginPage"
+
+const loginPage = new LoginPage()
+
 describe('Accessibility Tests', () => {
 
   it('Should not have accessibility violations on login page', () => {
 
-    cy.visit('https://www.saucedemo.com/')
+    loginPage.accessLoginPage()
 
     cy.injectAxe()
 

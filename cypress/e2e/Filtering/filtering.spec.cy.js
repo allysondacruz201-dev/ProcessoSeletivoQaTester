@@ -17,7 +17,7 @@ const cartPage = new CartPage()
 describe('Filtering and Buying', () => {
     it('You must filter and buy products', () => {  
 
-    loginPage.acessLoginPage()
+    loginPage.accessLoginPage()
     
     loginPage.loginWithAnyUser(users.standardUser.username, users.standardUser.password)
     loginPage.checkProductsPage()

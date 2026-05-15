@@ -18,7 +18,7 @@ class LoginPage {
 
 }
 
-    acessLoginPage() {
+    accessLoginPage() {
     cy.visit('https://www.saucedemo.com/')
 
     }

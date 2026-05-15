@@ -8,7 +8,7 @@ const products = new Products()
 describe('Login with Standard User',  () => {
   it('Login And open the main page', () => {  
     
-    loginPage.acessLoginPage()
+    loginPage.accessLoginPage()
 
     loginPage.loginWithAnyUser(users.standardUser.username, users.standardUser.password)
     loginPage.checkProductsPage()
@@ -22,7 +22,7 @@ describe('Login with Standard User',  () => {
 describe('Login with Locked User', () => {
  it('Login should fail', () => {  
   
-  loginPage.acessLoginPage()
+  loginPage.accessLoginPage()
 
   loginPage.loginWithAnyUser(users.lockedUser.username, users.lockedUser.password)
   loginPage.checkLoginFail()
@@ -33,7 +33,7 @@ describe('Login with Locked User', () => {
 describe('Login with Problem User', () => {
  it('The user must be experiencing a problem', () => {  
   
-  loginPage.acessLoginPage()
+  loginPage.accessLoginPage()
 
   loginPage.loginWithAnyUser(users.problemUser.username, users.problemUser.password)
   loginPage.checkProductsPage()
@@ -47,7 +47,7 @@ describe('Login with Problem User', () => {
 describe('Login With Performance Glitch User', () => {
  it('User is experiencing navigation problems', () => {  
   
-  loginPage.acessLoginPage()
+  loginPage.accessLoginPage()
 
   loginPage.loginWithAnyUser(users.performanceUser.username, users.performanceUser.password)
     loginPage.checkProductsPage()
@@ -72,7 +72,7 @@ describe('Login With Performance Glitch User', () => {
 describe('Login With Error User', () => {
  it('The Login Should Fail', () => {  
   
-  loginPage.acessLoginPage()
+  loginPage.accessLoginPage()
 
   loginPage.loginWithAnyUser(users.errorUser.username, users.errorUser.password)
     loginPage.checkProductsPage()
@@ -86,7 +86,7 @@ describe('Login With Error User', () => {
 describe('Login With Visual User', () => {
  it('User reports visual bugs.', () => {  
   
-  loginPage.acessLoginPage()
+  loginPage.accessLoginPage()
 
   loginPage.loginWithAnyUser(users.visualUser.username, users.visualUser.password)
     loginPage.checkProductsPage()
