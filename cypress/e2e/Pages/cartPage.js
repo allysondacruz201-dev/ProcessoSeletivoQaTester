@@ -6,10 +6,13 @@ class CartPage {
         finishCheckOut: '[data-test="checkout"]',
         errorMessage: '[data-test="error"]',
         buyCancelled: '[data-test="cancel"]',
-        returnShopping: '[data-test="continue-shopping"]',
+        continueShopping: '[data-test="continue-shopping"]',
         removeProductCart1: '[data-test="remove-sauce-labs-backpack"]',
         removeProductCart2: '[data-test="remove-sauce-labs-bike-light"]',
-        removeProductCart3: '[data-test="remove-sauce-labs-onesie"]'
+        removeProductCart3: '[data-test="remove-sauce-labs-onesie"]',
+        removeProductCart4: '[data-test="remove-sauce-labs-fleece-jacket"]',
+        removeProductCart5: '[data-test="remove-sauce-labs-bolt-t-shirt"]',
+        removeProductCart6: '[data-test="remove-test.allthethings()-t-shirt-(red)"]',
         
 
 
@@ -38,21 +41,34 @@ cancelButton(){
 
 }
 
-removingProduct1(){
+removingBackPack(){
     cy.get(this.selectorsList().removeProductCart1).click()
 }
 
-removingProduct2(){
+removingBikeLight(){
     cy.get(this.selectorsList().removeProductCart2).click()
 }
 
-removingProduct3(){
+removingOnesie(){
     cy.get(this.selectorsList().removeProductCart3).click()
 
 }
 
+removingFleeceJacket(){
+    cy.get(this.selectorsList().removeProductCart4).click()
+}
+
+removingBoltTShirt(){
+    cy.get(this.selectorsList().removeProductCart5).click()
+}
+
+removingRedTShirt(){
+    cy.get(this.selectorsList().removeProductCart6).click()
+}
+
 returnShopping(){
-    cy.get(this.selectorsList().returnShopping).click()
+    cy.get(this.selectorsList().continueShopping).click()
+    
 }
 
 }

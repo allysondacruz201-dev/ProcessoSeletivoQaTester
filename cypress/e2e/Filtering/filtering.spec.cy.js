@@ -21,6 +21,7 @@ describe('Filtering and Buying', () => {
     
     loginPage.loginWithAnyUser(users.standardUser.username, users.standardUser.password)
     loginPage.checkProductsPage()
+
     products.clickToFilter()
     products.byPrice1()
     products.clickToFilter()
@@ -29,20 +30,24 @@ describe('Filtering and Buying', () => {
     products.byPrice2()
     products.clickToFilter()
     products.byLetters()
-    products.clickBackPack()
-    products.clickBikeLight()
-    products.clickBoltTShirt()
-    products.clickFleeceJacket()
-    products.clickOnesie()
-    products.clickRedTShirt()
+    products.selectBackPack()
+    products.selectBikeLight()
+    products.selectBoltTShirt()
+    products.selectFleeceJacket()
+    products.selectOnesie()
+    products.selectRedTShirt()
+
     cartPage.enterCart()
     cartPage.checkOut()
+
     checkoutPage.fillFirstName(checkout.checkout.firstName)
     checkoutPage.fillLastName(checkout.checkout.lastName)
     checkoutPage.fillPostalCode(checkout.checkout.postalCode)
     checkoutPage.ClickContinue()
     checkoutPage.ClickFinish()
+
     products.backProductsPage()
+
     loginPage.checkProductsPage()
     loginPage.menuButton()
     loginPage.clickForLogout()

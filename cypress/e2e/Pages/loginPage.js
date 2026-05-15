@@ -9,7 +9,9 @@ class LoginPage {
         menuButton: '#react-burger-menu-btn',
         logoutButton: '[data-test="logout-sidebar-link"]',
         checkLoginPage: '.login_wrapper-inner',
-        checkMessageError: '[data-test="error"]'
+        checkMessageError: '[data-test="error"]',
+        mainPage: '[data-test="inventory-sidebar-link"]'
+
     }
 
     return selectors
@@ -48,6 +50,8 @@ class LoginPage {
     checkLoginFail() {
         cy.get(this.selectorsList().checkMessageError).should('be.visible')
     }
+
+   
    
 }
      

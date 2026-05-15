@@ -51,13 +51,15 @@ describe('Login With Performance Glitch User', () => {
 
   loginPage.loginWithAnyUser(users.performanceUser.username, users.performanceUser.password)
     loginPage.checkProductsPage()
-    products.clickBackPack()
-    products.checkDetailsProduct()
+
+    products.detailBackPack()
     products.backProductsPage()
+
     loginPage.checkProductsPage()
-    products.clickBoltTShirt()
-    products.checkDetailsProduct()
+
+    products.detailBoltTShirt()
     products.backProductsPage()
+
     loginPage.checkProductsPage()
     loginPage.menuButton()
     loginPage.clickForLogout()
